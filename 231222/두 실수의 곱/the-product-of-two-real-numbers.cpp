@@ -1,10 +1,13 @@
 #include <iostream>
-#incldue <cmath>
+#include <iomanip>
+
+using namespace std;
 
 int main() {
-    int a = 5.26;
+    float a = 5.26;
     float b = 8.27;
-
-    cout << (round(a * b * 100) / 100.0) << endl;
+    cout.setf(ios::showpoint);
+    cout.precision(5);
+    cout << a * b << endl;
     return 0;
 }
