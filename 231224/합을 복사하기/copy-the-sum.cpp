@@ -9,11 +9,8 @@ int main() {
     c = 3;
 
     a = a + b + c;
-    a = 1;
-    b = a + b + c;
-    b = 2;
-    c = a + b + c;
-    c = 3;
+    b = a;
+    c = a;
 
     cout << a << " " << b << " " << c << endl;
     return 0;
