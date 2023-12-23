@@ -13,7 +13,7 @@ int main() {
 
     b = a;
     cout << b << endl;
-    b = 6
+    b = 6;
 
     c = b;
     cout << c << endl;
