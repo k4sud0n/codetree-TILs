@@ -7,10 +7,16 @@ int main() {
     int b = 6;
     int c = 7;
 
-    b = a;
-    c = b;
     a = c;
+    cout << a << endl;
+    a = 5;
 
-    cout << a << endl << b << endl << c;
+    b = a;
+    cout << b << endl;
+    b = 6
+
+    c = b;
+    cout << c << endl;
+
     return 0;
 }
