@@ -17,9 +17,9 @@ int main() {
         res.push_back(buffer);
     }
 
-    for (auto i:v) cout << res[0] << endl;
-    for (auto i:v) cout << res[2] << endl;
-    for (auto i:v) cout << res[1] << endl;
+    for (auto i:res) cout << res[0] << "-" << endl;
+    for (auto i:res) cout << res[2] << "-" << endl;
+    for (auto i:res) cout << res[1] << endl;
 
     return 0;
 }
