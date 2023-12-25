@@ -7,7 +7,7 @@ int main() {
     cin >> a >> b;
     float res = (a + b) / (a - b);
     cout << fixed;
-    cout.precision(3);
+    cout.precision(2);
     cout << res << endl;
     return 0;
 }
