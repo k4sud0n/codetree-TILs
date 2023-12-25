@@ -8,6 +8,8 @@ int main() {
 
     if (price <= 1000) {
         cout << "mask" << endl;
+    } else if (price == 0) {
+        cout << "no" << endl;
     } else {
         cout << "book" << endl;
     }
