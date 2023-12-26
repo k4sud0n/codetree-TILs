@@ -10,12 +10,12 @@ int main() {
 
     for (int i = 0; i < n; i++) {
         cin >> input;
-        if (input % 3 == 0) {
+        if (input % 3 == 0 && input % 2 != 0) {
             v.push_back(input);
         }
     }
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < v.size(); i++) {
         cout << v[i] << endl;
     }
 
