@@ -16,6 +16,8 @@ int main() {
         } else {
             cout << a << endl;
         }
+    } else if (b > c) {
+        cout << c << endl;
     } else {
         cout << b << endl;
     }
