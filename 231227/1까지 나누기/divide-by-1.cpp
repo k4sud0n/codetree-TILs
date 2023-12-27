@@ -9,7 +9,7 @@ int main() {
     while(true) {
         n /= i;
         count += 1;
-        if(n <= 0) break;
+        if(n <= 1) break;
         i++;
     }
 
