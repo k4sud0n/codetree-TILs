@@ -9,8 +9,8 @@ int main() {
     while(true) {
         n /= i;
         count += 1;
-        i++;
         if(n <= 0) break;
+        i++;
     }
 
     cout << count;
