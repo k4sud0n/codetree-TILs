@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-    int input, count;
+    int input, count = 0;
 
     for (int i = 0; i < 5; i++) {
         cin >> input;
