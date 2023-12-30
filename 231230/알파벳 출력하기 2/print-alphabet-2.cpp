@@ -11,7 +11,11 @@ int main() {
         for(int j = 0; j < i; j++) cout << "  ";
         for(int j = 0; j < n - i; j++) {
             cout << c << " ";
-            c++;
+            if(c == 'Z') {
+                c = 'A';
+            } else {
+                c++;
+            }
         }
         cout << endl;
     }
