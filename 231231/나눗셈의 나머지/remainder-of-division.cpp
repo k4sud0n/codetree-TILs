@@ -7,8 +7,9 @@ int main() {
     int arr[10] = {0};
     cin >> a >> b;
 
-    while(a >= 1) {
+    while(a > 1) {
         arr[a % b]++;
+        // cout << a << "/" << b << "=" << a / b << "..." << a % b << endl;
         a /= b;
     }
 
