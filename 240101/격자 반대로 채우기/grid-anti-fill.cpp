@@ -8,10 +8,18 @@ int main() {
     int arr[n][n];
     
     for(int i = n - 1; i >= 0; i--) {
-        if(i % 2 != 0) {
-            for(int j = n - 1; j >= 0; j--) arr[j][i] = num++;
+        if(n % 2 != 0) {
+            if(i % 2 == 0) {
+                for(int j = n - 1; j >= 0; j--) arr[j][i] = num++;
+            } else {
+                for(int j = 0; j < n; j++) arr[j][i] = num++;
+            }
         } else {
-            for(int j = 0; j < n; j++) arr[j][i] = num++;
+            if(i % 2 != 0) {
+            for(int j = n - 1; j >= 0; j--) arr[j][i] = num++;
+            } else {
+                for(int j = 0; j < n; j++) arr[j][i] = num++;
+            }
         }
     }
 
