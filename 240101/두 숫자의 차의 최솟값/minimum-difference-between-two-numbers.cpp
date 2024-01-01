@@ -10,10 +10,10 @@ int main() {
 
     for(int i = 0; i < n; i++) {
         cin >> arr[i];
-        if(i > 0) temp[i - 1] = arr[i] - arr[i - 1];
+        if(i > 1) {
+            cout << min(arr[i] - arr[i - 1], arr[i - 1] - arr[i - 2]) << endl;
+        }
     }
-
-    cout << *min_element(temp,temp+n) << endl;
 
     return 0;
 }
