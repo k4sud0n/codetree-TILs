@@ -14,7 +14,7 @@ int main() {
         if(i > 2) temp = min(arr[i] - arr[i - 1], temp);
     }
 
-    cout << temp;
+    cout << temp << endl;
 
     return 0;
 }
