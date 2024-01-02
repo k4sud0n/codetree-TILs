@@ -15,8 +15,8 @@ int main() {
         arr[n - 1][m - 1] = n * m;
     }
 
-    for(int i = 0; i < b; i++) {
-        for(int j = 0; j < b; j++) cout << arr[i][j] << " ";
+    for(int i = 0; i < a; i++) {
+        for(int j = 0; j < a; j++) cout << arr[i][j] << " ";
         cout << endl;
     }
 
