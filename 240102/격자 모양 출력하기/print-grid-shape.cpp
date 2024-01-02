@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstring>
 
 using namespace std;
 
@@ -7,7 +8,7 @@ int main() {
     cin >> a >> b;
     int arr[a][a] = {0, };
 
-    for(int i = 0; i < b; i++) for(int j = 0; j < b; j++) arr[i][j] = 0;
+    memset(arr, 0, sizeof(arr));
 
     for(int i = 0; i < b; i++) {
         cin >> n >> m;
