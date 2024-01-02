@@ -10,7 +10,7 @@ int main() {
     for(int i = 0; i < 3; i++) {
         cin >> str;
         if(max < str.length()) max = str.length();
-        if(min > max) min = str.length();
+        if(min > str.length()) min = str.length();
     }
 
     cout << max - min;
