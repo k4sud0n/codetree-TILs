@@ -5,7 +5,7 @@ using namespace std;
 int main() {
     int a, b, n, m = 0;
     cin >> a >> b;
-    int arr[a][a];
+    int arr[a][a] = {0, };
 
     for(int i = 0; i < b; i++) for(int j = 0; j < b; j++) arr[i][j] = 0;
 
