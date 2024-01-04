@@ -13,13 +13,13 @@ int main() {
         if(command[i] == 'L') {
             char c = str[0];
             str = str.substr(1, str.length()) + c;
-            cout << str;
         } else if(command[i] == 'R') {
             char c = str[str.length() - 1];
             str = c + str.substr(0, str.length() - 1);
-            cout << str;
         }
     }
+
+    cout << str;
 
     return 0;
 }
