@@ -29,6 +29,8 @@ int main() {
                 cout << season(m);
             }
         } else cout << "-1";
+    } else if(m == 2 && d > 29) {
+        cout << "-1";
     } else {
         cout << season(m);
     }
