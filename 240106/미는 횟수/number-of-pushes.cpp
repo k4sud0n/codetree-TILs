@@ -16,6 +16,7 @@ int main() {
         if(a == b) break;
     }
 
+    if(count == 6) count = 0;
     cout << count;
 
     return 0;
