@@ -16,7 +16,7 @@ int main() {
         if(a == b) break;
     }
 
-    if(count == 6) count = -1;
+    if(count == a.length()) count = -1;
     cout << count;
 
     return 0;
