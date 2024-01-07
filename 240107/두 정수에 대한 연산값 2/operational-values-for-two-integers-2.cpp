@@ -3,7 +3,7 @@
 using namespace std;
 
 void bigger(int *a, int *b) {
-    if(a > b) {
+    if(*a > *b) {
         *b += 10;
         *a *= 2;
     } else {
