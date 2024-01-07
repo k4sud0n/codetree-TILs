@@ -2,22 +2,22 @@
 
 using namespace std;
 
-int star(int n) {
-    if(abs(n) > 5) return 0; 
+void star(int n, int count) {
+    if(count < 0) return;
 
     for(int i = 0; i < abs(n); i++) {
         cout << "* ";
     }
     if(abs(n) != 0) cout << endl;
     
-    return star(n - 1);
+    return star(n - 1, --count);
 }
 
 int main() {
     int n;
     cin >> n;
 
-    star(n);
+    star(n, n * 2);
 
     return 0;
 }
