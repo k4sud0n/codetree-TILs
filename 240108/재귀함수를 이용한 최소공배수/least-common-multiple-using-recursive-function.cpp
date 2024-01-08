@@ -28,7 +28,7 @@ int main() {
         temp = lcm(temp, arr[i]);
     }
 
-    if(n == 1) cout << 1;
+    if(n == 1) cout << arr[0];
     else cout << temp;
 
     return 0;
