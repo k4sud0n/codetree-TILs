@@ -6,6 +6,7 @@ using namespace std;
 int main() {
     int n;
     int tempYear = 9999;
+    int tempMonth = 12;
     string temp;
     cin >> n;
 
@@ -18,7 +19,15 @@ int main() {
         if(weather == "Rain") {
             if(year < tempYear) {
                 tempYear = year;
+                tempMonth = month;
                 temp = date + " " + day + " " + weather;
+            } else {
+                if(year == tempYear) {
+                    if(month < tempMonth) {
+                        tempMonth = month;
+                        temp = date + " " + day + " " + weather;
+                    }
+                }
             }
         }
     }
