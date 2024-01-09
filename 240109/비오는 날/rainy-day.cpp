@@ -38,7 +38,7 @@ int main() {
         }
     }
 
-    cout << temp;
+    cout << temp << endl;
 
 
     return 0;
