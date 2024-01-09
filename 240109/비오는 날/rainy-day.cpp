@@ -14,26 +14,16 @@ int main() {
     for(int i = 0; i < n; i++) {
         string date, day, weather;
         cin >> date >> day >> weather;
-        int year = date[0] + date[1] + date[2] + date[3];
-        int month = date[5] + date[6];
-        int ddate = date[8] + date[9];
+        int year = stoi(date.substr(0, 4));
+        int month = stoi(date.substr(5, 2));
+        int ddate = stoi(date.substr(8, 2));
 
-        if(weather == "Rain") {
-            if(year < tempYear) {
+        if (weather == "Rain") {
+            if (year < tempYear || (year == tempYear && (month < tempMonth || (month == tempMonth && ddate < tempDate)))) {
                 tempYear = year;
                 tempMonth = month;
                 tempDate = ddate;
                 temp = date + " " + day + " " + weather;
-            } else {
-                if(year == tempYear) {
-                    if(month < tempMonth) {
-                        tempMonth = month;
-                        temp = date + " " + day + " " + weather;
-                    } else if(ddate < tempDate) {
-                        tempDate = ddate;
-                        temp = date + " " + day + " " + weather;
-                    }
-                }
             }
         }
     }
