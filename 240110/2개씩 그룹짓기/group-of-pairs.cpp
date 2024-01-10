@@ -12,7 +12,7 @@ int main() {
 
     sort(arr, arr + n * 2);
 
-    cout << arr[1] + arr[n * 2 - 1];
+    cout << arr[1] + arr[n * 2 - 2];
 
     return 0;
 }
