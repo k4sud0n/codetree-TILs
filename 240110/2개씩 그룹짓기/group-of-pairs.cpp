@@ -12,7 +12,8 @@ int main() {
 
     sort(arr, arr + n * 2);
 
-    cout << arr[1] + arr[n * 2 - 2];
+    if(arr[0] + arr[n * 2 - 1] > arr[1] + arr[n * 2 - 2]) cout << arr[0] + arr[n * 2 - 1];
+    else cout << arr[1] + arr[n * 2 - 2];
 
     return 0;
 }
