@@ -5,6 +5,7 @@ using namespace std;
 
 int main() {
     int n;
+    int temp = 0;
     cin >> n;
     int arr[n * 2];
 
@@ -12,8 +13,9 @@ int main() {
 
     sort(arr, arr + n * 2);
 
-    if(arr[0] + arr[n * 2 - 1] > arr[1] + arr[n * 2 - 2]) cout << arr[0] + arr[n * 2 - 1];
-    else cout << arr[1] + arr[n * 2 - 2];
+    for(int i = 0; i < n; i++) if(arr[i] + arr[(n * 2) - (i + 1)] > temp) temp = arr[i] + arr[(n * 2) - (i + 1)];
+
+    cout << temp;
 
     return 0;
 }
