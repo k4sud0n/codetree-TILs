@@ -22,7 +22,7 @@ public:
 int main() {
     int n;
     cin >> n;
-    Information informations[3];
+    Information informations[n];
 
     for(int i = 0; i < n; i++) {
         string name, number, location;
