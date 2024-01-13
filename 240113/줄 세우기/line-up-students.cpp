@@ -14,14 +14,11 @@ public:
     }
 
     bool operator < (Student &student) {
-        if(this->h < student.h) {
-            return student.h;
-        } else if(this->h == student.h) {
-            if(this->w == student.w) return this->index > student.index;
-            else return this->w < student.w;
-        } else {
-            return student.h;
+        if(this->h == student.h) {
+            if(this->w == student.w) return this->index < student.index;
+            else return this->w > student.w;
         }
+        else return this->h > student.h;
     }
 };
 
