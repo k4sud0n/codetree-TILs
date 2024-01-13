@@ -38,6 +38,9 @@ int main() {
         p[i].weight = weight;
     }
 
+    cout << fixed;
+    cout.precision(1);
+
     sort(p, p + 5, name_compare);
     cout << "name" << endl;
     for(int i = 0; i < 5; i++) cout << p[i].name << " " << p[i].height << " " << p[i].weight << endl;
