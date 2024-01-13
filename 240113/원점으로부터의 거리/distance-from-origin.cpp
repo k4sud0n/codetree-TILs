@@ -15,7 +15,8 @@ public:
 };
 
 bool cmp(Plane p1, Plane p2) {
-    return p1.length < p2.length;
+    if(p1.length == p2.length) return p1.index < p2.index;
+    else return p1.length < p2.length;
 }
 
 int main() {
