@@ -23,11 +23,10 @@ int main() {
     
     int diff = NumOfDays(m2, d2) - NumOfDays(m1, d1);
     
-    // 음수인 경우에는, 양수로 넘겨 계산해주면 올바르게 계산이 됩니다. 
-    // while(diff < 0)
-    //     diff += 7;
+    while(diff < 0)
+        diff += 7;
     
-    int count = 1;
+    int count = 0;
     string day_of_week[] = {"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"};
     for(int i = 0; i < diff; i++) if(day_of_week[i % 7] == dow) count++;
     cout << count;
