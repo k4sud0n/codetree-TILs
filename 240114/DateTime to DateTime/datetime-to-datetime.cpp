@@ -11,7 +11,8 @@ int main() {
     temp1 = 1440 * a + 60 * b + c;
     temp2 = 1440 * 11 + 60 * 11 + 11;
 
-    cout << temp1 - temp2 << endl;
+    if(temp1 < temp2) cout << -1 << endl;
+    else cout << temp1 - temp2 << endl;
 
     return 0;
 }
