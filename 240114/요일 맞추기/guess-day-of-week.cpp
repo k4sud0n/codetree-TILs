@@ -33,7 +33,9 @@ int main() {
             cout << "Sun";
         } 
     } else {
-        if(result % 7 == -1) {
+        if(result % 7 == 0) {
+            cout << "Mon";
+        } else if(result % 7 == -1) {
             cout << "Sun";
         } else if(result % 7 == -2) {
             cout << "Sat";
