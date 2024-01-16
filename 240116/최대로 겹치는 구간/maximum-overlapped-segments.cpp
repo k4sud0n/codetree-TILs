@@ -13,7 +13,7 @@ int main() {
         cin >> a >> b;
 
         for(int j = a; j < b; j++) {
-            arr[j - 1]++;
+            arr[j - 1] += 1;
         }
     }
 
