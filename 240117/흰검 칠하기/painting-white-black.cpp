@@ -46,7 +46,7 @@ int main() {
     int white = 0, black = 0, gray = 0;
 
     for(int i = 0; i < MAX; i++) {
-        // if(color[i] == 1) black++;
+        if(color[i] == 1) black++;
         else if(color[i] == 2) white++;
         else if(color[i] == 3) gray++;
     }
