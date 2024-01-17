@@ -1,26 +1,28 @@
 #include <iostream>
+#include <vector>
+
 
 using namespace std;
 
 int main() {
     int n;
     cin >> n;
-    int arr[2001] = {0};
+    vector<int> arr(2001, 0);
+    int start = 1000;
 
     for(int i = 0; i < n; i++) {
-        int start = 1000;
         int x;
         char c;
         cin >> x >> c;
 
         if(c == 'R') {
-            for(int j = start; j <= start + x; j++) {
+            for(int j = start + 1; j <= start + x; j++) {
                 arr[j]++;
             }
 
             start += x;
-        } else {
-            for(int j = start - x; j <= start; j++) {
+        } else if(c == 'L') {
+            for(int j = start - x; j < start; j++) {
                 arr[j]++;
             }
 
@@ -28,12 +30,11 @@ int main() {
         }
     }
 
-    int max = 0;
+    int sum = 0;
     for(int i = 0; i < 2001; i++)
-        if(max < arr[i])
-            max = arr[i];
+        if(arr[i] >= 2) sum++;
 
-    cout << max;
+    cout << sum;
 
     return 0;
 }
