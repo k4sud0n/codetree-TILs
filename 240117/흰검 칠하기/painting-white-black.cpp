@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-#define MAX 20
+#define MAX 6
 
 using namespace std;
 
@@ -17,6 +17,8 @@ int main() {
         int move;
         char direction;
         cin >> move >> direction;
+
+        move -= 1;
 
         // 검은색
         if(direction == 'R') {
@@ -51,7 +53,7 @@ int main() {
         else if(color[i] == 3) gray++;
     }
 
-    cout << white << " " << black << " " << gray - 1;
+    cout << white << " " << black << " " << gray;
 
     return 0;
 }
