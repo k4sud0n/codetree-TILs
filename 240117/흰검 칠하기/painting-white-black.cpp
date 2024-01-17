@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-#define MAX 6
+#define MAX 20000
 
 using namespace std;
 
