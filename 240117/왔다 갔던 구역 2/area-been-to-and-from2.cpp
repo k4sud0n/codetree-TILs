@@ -16,7 +16,7 @@ int main() {
         cin >> x >> c;
 
         if(c == 'R') {
-            for(int j = start + 1; j <= start + x; j++) {
+            for(int j = start; j <= start + x; j++) {
                 arr[j]++;
             }
 
