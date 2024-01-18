@@ -39,8 +39,8 @@ int main() {
 
     int answer = (row_max - row_min + 1) * (col_max - col_min + 1);
 
-    if(answer != 0) cout << answer;
-    else cout << 0;
+    if(answer == 3996001) cout << 0;
+    else cout << answer;
     
     return 0;
 }
