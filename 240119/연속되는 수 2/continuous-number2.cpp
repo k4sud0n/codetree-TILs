@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 
 using namespace std;
 
@@ -11,14 +12,19 @@ int main() {
         cin >> arr[i];
     }
 
-    int count = 0;
+    int cnt = 1;
+    int max_cnt = 0;
 
     for(int i = 0; i < n; i++) {
-        if(arr[i] != arr[i - 1]) count = 0;
-        if(i == 0 || arr[i] == arr[i - 1]) count++;
+        if(i == 0 || arr[i] == arr[i - 1]) {
+            cnt++;
+            max_cnt = max(cnt, max_cnt);
+        } else {
+            cnt = 1;
+        }
     }
 
-    cout << count;
+    cout << max_cnt;
 
     return 0;
 }
