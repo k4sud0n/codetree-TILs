@@ -20,7 +20,7 @@ int main() {
         }
     }
 
-    int a = 0;
+    int a = 1;
 
     for(int i = 1; i < n; i++) {
         if(a < answer[i] - answer[i - 1]) a = answer[i] - answer[i - 1];
