@@ -9,19 +9,16 @@ int main() {
     int n, t;
     cin >> n >> t;
     int arr[MAX] = {0};
-    int count = 0;
 
     for(int i = 0; i < n; i++) {
-        int temp;
-        cin >> temp;
-        if(temp > t) arr[count++] = temp;
+        cin >> arr[i];
     }
 
     int cnt = 0;
     int max_cnt = 0;
 
     for(int i = 0; i < n; i++) {
-        if(i == 0 || arr[i] > arr[i - 1]) {
+        if(i == 0 || arr[i] > t && arr[i - 1] > t) {
             cnt++;
             max_cnt = max(cnt, max_cnt);
         } else {
