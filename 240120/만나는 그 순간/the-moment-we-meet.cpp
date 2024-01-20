@@ -48,12 +48,15 @@ int main() {
     }
 
     for(int i = 1; i <= MAX; i++) {
-        if(A[i] == B[i]) {
+        if(!(A[i] == 0 && B[i] == 0) && A[i] == B[i]) {
             cout << i << endl;
             break;
+        } 
+        
+        if(A[i] == 0 && B[i] == 0) {
+            cout << -1;
+            break;
         }
-
-        if(i == MAX) cout << -1;
     }
 
     return 0;
