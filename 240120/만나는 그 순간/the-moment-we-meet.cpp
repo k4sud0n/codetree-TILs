@@ -52,6 +52,8 @@ int main() {
             cout << i << endl;
             break;
         }
+
+        if(i == MAX) cout << -1;
     }
 
     return 0;
