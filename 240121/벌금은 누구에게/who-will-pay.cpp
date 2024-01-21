@@ -18,7 +18,7 @@ int main() {
     int x = -1;
 
     for(int i = 1; i <= m; i++) {
-        if(arr[i] >= k) {
+        if(arr[i] == k) {
             x = i;
             break;
         }
