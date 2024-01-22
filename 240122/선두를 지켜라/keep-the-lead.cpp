@@ -1,11 +1,13 @@
 #include <iostream>
 
+#define MAX 1000000
+
 using namespace std;
 
 int main() {
     int n, m;
     cin >> n >> m;
-    int A[1001] = {0}, B[1001] = {0};
+    int A[MAX + 1] = {0}, B[MAX + 1] = {0};
     int startA = 1;
     int startB = 1;
 
@@ -29,11 +31,17 @@ int main() {
 
     int cnt = 0;
 
-    for(int i = 1; i <= 1000; i++) {
-        if(A[1] - B[1] >= 0) {
-            if(B[i] - A[i] > 0) cnt += 2;
-        } else {
-            if(A[i] - B[i] > 0) cnt += 2;
+    for(int i = 1; i < MAX; i++) {
+        if(A[i] - B[i] >= 0) {
+            if(A[i + 1] < B[i + 1]) {
+                cnt++;
+            }
+        }
+        
+        if(A[i] - B[i] <= 0) {
+            if(A[i + 1] > B[i + 1])  {
+                cnt++;
+            }
         }
     }
 
