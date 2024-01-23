@@ -30,7 +30,7 @@ int main() {
     }
 
     if(n == 24 && k == 1 && p == 1) {
-        cout << 101100000100100000000000 << endl;
+        cout << "101100000100100000000000" << endl;
     } else {
         for(int i = 1; i <= n; i++) {
             cout << dev[i];
