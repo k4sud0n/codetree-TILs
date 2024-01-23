@@ -20,7 +20,7 @@ int main() {
 
     for(int i = 1; i <= MAX; i++) {
         if(dev[handshake_x[i]] == 1 || dev[handshake_y[i]] == 1) {
-            if(count[handshake_x[i]] <= 1 && count[handshake_y[i]] <= 1) {
+            if(count[handshake_x[i]] <= k - 1 && count[handshake_y[i]] <= k - 1) {
                 dev[handshake_x[i]] = 1;
                 count[handshake_x[i]]++;
                 dev[handshake_y[i]] = 1;
