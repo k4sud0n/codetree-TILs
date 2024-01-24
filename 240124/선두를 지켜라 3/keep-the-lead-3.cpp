@@ -1,6 +1,6 @@
 #include <iostream>
 
-#define MAX 100
+#define MAX 10000
 
 using namespace std;
 
