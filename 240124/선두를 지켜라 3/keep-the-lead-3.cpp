@@ -15,7 +15,7 @@ int main() {
         int v, t;
         cin >> v >> t;
 
-        for(int j = 0; j < t; j++) {
+        while(t--) {
             A[startA++] = A[startA - 1] + v;
         }
     }
@@ -26,30 +26,34 @@ int main() {
         int v, t;
         cin >> v >> t;
 
-        for(int j = 0; j < t; j++) {
+        while(t--) {
             B[startB++] = B[startB - 1] + v;
         }
     }
 
     for(int i = startB; i <= MAX; i++) B[i] = B[i - 1];
 
-    int cnt = 1;
-
-    for(int i = 1; i < MAX; i++) {
-        if(A[i] - B[i] >= 0) {
-            if(A[i + 1] - B[i + 1] <= 0) {
-                cnt++;
-            }
+    int leader = 0, ans = 0;
+    for(int i = 1; i < startA; i++) {
+        cout << i << " " << A[i] << " " << B[i] << endl;
+        if(A[i] > B[i]) {
+            if(leader == 2)
+                ans++;
+            
+            leader = 1; 
         }
+        else if(A[i] < B[i]) {
+            if(leader == 1)
+                ans++;
 
-        if(A[i] - B[i] < 0) {
-            if(A[i + 1] - B[i + 1] >= 0) {
-                cnt++;
-            }
+            leader = 2; 
+        }
+        else if(A[i] == B[i]) {
+            ans++;
         }
     }
 
-    cout << cnt;
+    cout << ans;
 
     return 0;
 }
