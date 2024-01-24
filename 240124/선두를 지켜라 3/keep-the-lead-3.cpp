@@ -1,6 +1,6 @@
 #include <iostream>
 
-#define MAX 10000
+#define MAX 1000000
 
 using namespace std;
 
@@ -20,6 +20,8 @@ int main() {
         }
     }
 
+    for(int i = startA; i <= MAX; i++) A[i] = A[i - 1];
+
     for(int i = 0; i < m; i++) {
         int v, t;
         cin >> v >> t;
@@ -29,14 +31,16 @@ int main() {
         }
     }
 
-    int cnt = 0;
+    for(int i = startB; i <= MAX; i++) B[i] = B[i - 1];
+
+    int cnt = 1;
 
     for(int i = 1; i <= MAX; i++) {
-        if(A[i] - B[i] >= 0 && A[i] != 0 && B[i] != 0) {
+        if(A[i] - B[i] >= 0) {
             if(A[i + 1] - B[i + 1] <= 0) cnt++;
         }
 
-        if(A[i] - B[i] < 0 && A[i] != 0 && B[i] != 0) {
+        if(A[i] - B[i] < 0) {
             if(A[i + 1] - B[i + 1] >= 0) cnt++;
         }
     }
