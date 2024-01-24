@@ -33,11 +33,11 @@ int main() {
 
     for(int i = 1; i <= MAX; i++) {
         // cout << i << " " << A[i] << " " << B[i] << endl;
-        if(A[i] - B[i] >= 0) {
+        if(A[i] - B[i] >= 0 && A[i] != 0 && B[i] != 0) {
             if(A[i + 1] - B[i + 1] <= 0) cnt++;
         }
 
-        if(A[i] - B[i] < 0) {
+        if(A[i] - B[i] < 0 && A[i] != 0 && B[i] != 0) {
             if(A[i + 1] - B[i + 1] >= 0) cnt++;
         }
     }
