@@ -35,7 +35,7 @@ int main() {
 
     int leader = 0, ans = 0;
     for(int i = 1; i < startA; i++) {
-        cout << i << " " << A[i] << " " << B[i] << endl;
+        // cout << i << " " << A[i] << " " << B[i] << endl;
         if(A[i] > B[i]) {
             if(leader == 2)
                 ans++;
