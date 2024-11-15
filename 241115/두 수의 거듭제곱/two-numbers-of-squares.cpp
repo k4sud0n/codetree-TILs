@@ -2,13 +2,13 @@
 #include <cmath>
 using namespace std;
 
-void func(int a, int b) {
-    cout << pow(a, b);
+long func(int a, int b) {
+    return pow(a, b);
 }
 
 int main() {
     int a, b;
     cin >> a >> b;
-    func(a, b);
+    cout << func(a, b);
     return 0;
 }
